@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function WhoWeAreSection() {
   return (
     <section className="py-20 bg-gray-50">
@@ -6,13 +8,13 @@ export default function WhoWeAreSection() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <div className="w-80 h-80 bg-blue-100 rounded-full flex items-center justify-center">
-                <div className="w-64 h-40 bg-white rounded-lg shadow-lg flex items-center justify-center">
-                  <img
-                    src="/pos-system-dashboard-interface.jpg"
+                  <Image
+                    src="/images/dashboard.png"
                     alt="POS System Dashboard"
-                    className="w-48 h-28 object-cover rounded"
+                    className="mt-4 object-cover rounded"
+                    width={240}
+                    height={240}
                   />
-                </div>
               </div>
             </div>
             <div>

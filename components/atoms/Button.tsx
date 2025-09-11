@@ -3,14 +3,16 @@
 import type React from "react"
 
 interface ButtonProps {
+  type?: "button" | "submit"
   children: React.ReactNode
   variant?: "primary" | "secondary"
   size?: "sm" | "md" | "lg"
   className?: string
   onClick?: () => void
+  disabled?: boolean
 }
 
-export default function Button({ children, variant = "primary", size = "md", className = "", onClick }: ButtonProps) {
+export default function Button({ children, variant = "primary", size = "md", className = "", onClick, type = "button", disabled = false }: ButtonProps) {
   const baseClasses = "font-semibold rounded-lg transition-all duration-300 hover:transform hover:scale-105"
 
   const variantClasses = {
@@ -25,7 +27,7 @@ export default function Button({ children, variant = "primary", size = "md", cla
   }
 
   return (
-    <button className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`} onClick={onClick}>
+    <button type={type} className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`} onClick={onClick} disabled={disabled}>
       {children}
     </button>
   )

@@ -25,7 +25,7 @@ export default function MerchantCard({
         {/* Image Section */}
         <div className="lg:w-1/2 relative">
           <Image
-            src={image || "/placeholder.svg"}
+            src={image}
             alt={name}
             width={400}
             height={300}

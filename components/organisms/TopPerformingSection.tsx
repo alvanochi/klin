@@ -37,18 +37,17 @@ export default function TopPerformingSection() {
         </div>
 
         <div className="space-y-12">
-          {topMerchants.map((merchant, index) => (
+          {/* {topMerchants.map((merchant, index) => ( */}
             <MerchantCard
-              key={index}
-              name={merchant.name}
-              category={merchant.category}
-              rating={merchant.rating}
-              achievement={merchant.achievement}
-              badge={merchant.badge}
-              image={merchant.image}
+              name={"Elegance Wear"}
+              category={"Car Wash"}
+              rating={5}
+              achievement={"100+ produk terjual setiap minggu"}
+              badge={"Top Growth"}
+              image={"/images/top-perform.png"}
               className="max-w-5xl mx-auto"
             />
-          ))}
+          {/* ))} */}
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Button from "../atoms/Button"
 
 export default function CallToActionSection() {
@@ -11,9 +12,9 @@ export default function CallToActionSection() {
           Dengan menjadi merchant kami, Anda akan mendapatkan visibilitas lebih luas, transaksi lebih mudah, dan
           keuntungan lebih besar. Daftar sekarang, wujudkan bisnis impian Anda bersama kami.
         </p>
-        <Button size="lg" className="shadow-2xl">
+        <Link href="/contact" className="px-8 py-4 text-lg bg-blue-600 hover:bg-blue-700 text-white shadow-2xl font-semibold rounded-lg transition-all duration-300 hover:transform hover:scale-105">
           Hubungi Sekarang
-        </Button>
+        </Link>
       </div>
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

@@ -15,11 +15,11 @@ export default function ServiceHeroSection() {
           </div>
           <div className="relative">
             <Image
-              src="/customer-using-credit-card-with-pos-terminal-at-ca.jpg"
+              src="/images/pos-system.png"
               alt="Customer using POS system at carwash"
               width={600}
               height={400}
-              className="w-full h-auto rounded-lg shadow-lg"
+              className="w-full h-auto rounded-3xl shadow-lg"
             />
           </div>
         </div>

@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Logo from "../atoms/Logo"
 import ContactInfo from "../molecules/ContactInfo"
 
@@ -19,10 +20,10 @@ export default function Footer() {
             <h3 className="text-xl font-bold text-white mb-4">Tautan Cepat</h3>
             <div className="space-y-3">
               <div>
-                <h4 className="text-white font-semibold mb-2">Tentang Kami</h4>
+                <Link href={"/about"} className="text-white font-semibold mb-2">Tentang Kami</Link>
               </div>
               <div>
-                <h4 className="text-white font-semibold">Layanan</h4>
+                <Link href={"/service"} className="text-white font-semibold">Layanan</Link>
               </div>
             </div>
           </div>

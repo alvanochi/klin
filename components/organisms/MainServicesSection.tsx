@@ -74,7 +74,7 @@ export default function MainServicesSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <Image
-              src="/collage-of-car-wash-services-including-pos-system-.jpg"
+              src="/images/service-1.jpg"
               alt="Car wash services collage"
               width={400}
               height={500}

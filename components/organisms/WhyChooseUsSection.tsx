@@ -1,3 +1,4 @@
+import Image from "next/image"
 import FeatureBadge from "../atoms/FeatureBadge"
 
 export default function WhyChooseUsSection() {
@@ -22,10 +23,12 @@ export default function WhyChooseUsSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
-            <img
-              src="/images/car-wash-service.jpg"
+            <Image
+              src="/images/car-1.png"
               alt="Car wash service"
-              className="w-full h-auto rounded-lg shadow-2xl"
+              className="rounded-lg shadow-2xl"
+              width={600}
+              height={400}
             />
           </div>
 
@@ -39,7 +42,6 @@ export default function WhyChooseUsSection() {
         </div>
       </div>
 
-      {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(12)].map((_, i) => (
           <div

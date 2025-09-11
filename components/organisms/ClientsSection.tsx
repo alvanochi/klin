@@ -1,5 +1,7 @@
+import Image from "next/image"
+
 export default function ClientsSection() {
-  const clientImages = ["/images/client-1.jpg", "/images/client-2.jpg", "/images/client-3.jpg"]
+  const clientImages = ["/images/client-1.png", "/images/client-2.png", "/images/client-3.png"]
 
   return (
     <section className="bg-gray-50 py-20 relative overflow-hidden">
@@ -17,22 +19,28 @@ export default function ClientsSection() {
 
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
-              <img
-                src={clientImages[0] || "/placeholder.svg"}
+              <Image
+                src={clientImages[0]}
                 alt="Client 1"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
+                width={600}
+                height={400}
               />
-              <img
-                src={clientImages[1] || "/placeholder.svg"}
+              <Image
+                src={clientImages[1]}
                 alt="Client 2"
                 className="w-full h-32 object-cover rounded-lg shadow-lg"
+                width={600}
+                height={400}
               />
             </div>
             <div className="pt-8">
-              <img
-                src={clientImages[2] || "/placeholder.svg"}
+              <Image
+                src={clientImages[2]}
                 alt="Client 3"
                 className="w-full h-56 object-cover rounded-lg shadow-lg"
+                width={600}
+                height={400}
               />
             </div>
           </div>

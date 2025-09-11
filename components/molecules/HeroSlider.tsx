@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useState, useEffect } from "react"
 
 const slides = [
@@ -35,7 +36,7 @@ export default function HeroSlider() {
   }, [])
 
   return (
-   <div className="relative h-[600px] overflow-hidden rounded-lg shadow-lg">
+   <div className="relative h-[520px] mx-4 overflow-hidden rounded-lg shadow-lg">
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -51,10 +52,11 @@ export default function HeroSlider() {
               </div>
             </div>
             <div className="hidden md:block w-1/2 relative">
-              <img
-                src={slide.image || "/placeholder.svg"}
+              <Image
+                src={slide.image}
                 alt={`Slide ${slide.id}`}
-                className="w-full h-full object-cover"
+                className="object-cover"
+                fill
               />
             </div>
           </div>

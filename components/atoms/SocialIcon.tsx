@@ -1,9 +1,11 @@
+import Link from "next/link"
+
 interface SocialIconProps {
   platform: "linkedin" | "instagram" | "facebook"
   className?: string
 }
 
-export default function SocialIcon({ platform, className = "" }: SocialIconProps) {
+export default function SocialIcon({ platform, className = "bg-white/10 text-white hover:bg-white/20" }: SocialIconProps) {
   const icons = {
     linkedin: (
       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -11,8 +13,13 @@ export default function SocialIcon({ platform, className = "" }: SocialIconProps
       </svg>
     ),
     instagram: (
-      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.618 5.367 11.986 11.988 11.986s11.987-5.368 11.987-11.986C24.014 5.367 18.635.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.864 3.708 13.713 3.708 12.416s.49-2.448 1.418-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.928.875 1.418 2.026 1.418 3.323s-.49 2.448-1.418 3.275c-.875.807-2.026 1.297-3.323 1.297zm7.83-9.404c-.315 0-.595-.122-.807-.315-.21-.21-.315-.49-.315-.807s.105-.595.315-.807c.21-.21.49-.315.807-.315s.595.105.807.315c.21.21.315.49.315.807s-.105.595-.315.807c-.21.193-.49.315-.807.315z" />
+      <svg className="w-6 h-6" fill="currentColor" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+          viewBox="-271 273 256 256">
+        <path d="M-64.5,273h-157c-27.3,0-49.5,22.2-49.5,49.5v52.3v104.8c0,27.3,22.2,49.5,49.5,49.5h157c27.3,0,49.5-22.2,49.5-49.5V374.7
+          v-52.3C-15.1,295.2-37.3,273-64.5,273z M-50.3,302.5h5.7v5.6v37.8l-43.3,0.1l-0.1-43.4L-50.3,302.5z M-179.6,374.7
+          c8.2-11.3,21.5-18.8,36.5-18.8s28.3,7.4,36.5,18.8c5.4,7.4,8.5,16.5,8.5,26.3c0,24.8-20.2,45.1-45.1,45.1s-44.9-20.3-44.9-45.1
+          C-188.1,391.2-184.9,382.1-179.6,374.7z M-40,479.5C-40,493-51,504-64.5,504h-157c-13.5,0-24.5-11-24.5-24.5V374.7h38.2
+          c-3.3,8.1-5.2,17-5.2,26.3c0,38.6,31.4,70,70,70c38.6,0,70-31.4,70-70c0-9.3-1.9-18.2-5.2-26.3H-40V479.5z"/>
       </svg>
     ),
     facebook: (
@@ -23,10 +30,11 @@ export default function SocialIcon({ platform, className = "" }: SocialIconProps
   }
 
   return (
-    <div
-      className={`w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-white/20 transition-colors cursor-pointer ${className}`}
+    <Link
+      href={`https://${platform}.com/klin`}
+      className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors cursor-pointer ${className}`}
     >
       {icons[platform]}
-    </div>
+    </Link>
   )
 }
