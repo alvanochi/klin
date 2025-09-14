@@ -7,7 +7,6 @@ import FormInput from "../atoms/FormInput"
 import FormTextarea from "../atoms/FormTextarea"
 import Button from "../atoms/Button"
 
-// API Configuration - Change these values to match your backend
 const API_CONFIG = {
   baseURL: "https://your-api-domain.com", // Change this to your API base URL
   endpoint: "/api/contact", // Change this to your contact endpoint
