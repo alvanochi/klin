@@ -7,12 +7,6 @@ import FormInput from "../atoms/FormInput"
 import FormTextarea from "../atoms/FormTextarea"
 import Button from "../atoms/Button"
 
-const API_CONFIG = {
-  baseURL: "https://your-api-domain.com", // Change this to your API base URL
-  endpoint: "/api/contact", // Change this to your contact endpoint
-  timeout: 10000, // Request timeout in milliseconds
-}
-
 interface FormData {
   fullName: string
   phoneNumber: string
@@ -47,31 +41,20 @@ export default function ContactForm() {
     setSubmitStatus("idle")
 
     try {
-      // API Integration - Modify this section based on your backend requirements
-      const response = await fetch(`${API_CONFIG.baseURL}${API_CONFIG.endpoint}`, {
+      const response = await fetch(`api/send`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          // Add any additional headers your API requires
-          // 'Authorization': 'Bearer your-token',
-          // 'X-API-Key': 'your-api-key',
         },
         body: JSON.stringify({
-          // Modify field names to match your API expectations
-          full_name: formData.fullName,
-          phone_number: formData.phoneNumber,
-          email: formData.email,
-          carwash_name: formData.carwashName,
-          message: formData.message,
-          // Add any additional fields your API requires
-          // source: 'website',
-          // timestamp: new Date().toISOString(),
-        }),
+        to: "tes@alpan.com",
+        subject: `Pesan dari ${formData.fullName}  - ${formData.carwashName}`,
+        text: formData.message,
+      }),
       })
 
       if (response.ok) {
         setSubmitStatus("success")
-        // Reset form on success
         setFormData({
           fullName: "",
           phoneNumber: "",

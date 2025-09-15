@@ -1,9 +1,8 @@
-import dynamic from "next/dynamic";
+'use client'
 
-const Map = dynamic(() => import("./Map"), {
-  ssr: false,
-});
+import dynamic from "next/dynamic"
 
+const Map = dynamic(() => import("@/components/organisms/Map"), { ssr: false })
 export default function LocationSection() {
   return (
     <section className="py-16 lg:py-24 bg-white">

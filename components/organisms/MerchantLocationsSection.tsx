@@ -1,9 +1,8 @@
-import dynamic from "next/dynamic";
+'use client'
 
-const Map = dynamic(() => import("./Map"), {
-  ssr: false,
-});
+import dynamic from "next/dynamic"
 
+const Map = dynamic(() => import("@/components/organisms/Map"), { ssr: false })
 export default function MerchantLocationsSection() {
   const locations = [
     { latitude: -6.225, longitude: 106.809, title: "RPN Pademangan"},
